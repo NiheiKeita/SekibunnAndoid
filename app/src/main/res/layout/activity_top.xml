@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TopActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ひたすら積分"
+        android:layout_marginTop="90dp"
+        android:textSize="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:fontFamily = "@font/font1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/sum_solved_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="今まで解いた数：8 問"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/top_ta_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/top_ta_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="あなたのTA記録：20 秒"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/mode_text"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sum_solved_text" />
+
+    <TextView
+        android:id="@+id/mode_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="難易度："
+        android:textSize="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/unlimited_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/top_ta_text" />
+    <TextView
+        android:id="@+id/easy_non_active"
+        android:text="EASY"
+        android:layout_marginLeft="20sp"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_width="60sp"
+        android:layout_height="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mode_text"
+        app:layout_constraintTop_toTopOf="@+id/mode_text"
+        app:layout_constraintLeft_toRightOf="@+id/mode_text"/>
+    <TextView
+        android:id="@+id/easy"
+        android:text="EASY"
+        android:layout_marginLeft="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="#FF00FF"
+        android:gravity="center"
+        android:layout_width="60sp"
+        android:layout_height="40sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mode_text"
+        app:layout_constraintTop_toTopOf="@+id/mode_text"
+        app:layout_constraintLeft_toRightOf="@+id/mode_text"/>
+    <TextView
+        android:id="@+id/hard_non_active"
+        android:text="HARD"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:layout_width="60sp"
+        android:layout_height="40sp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mode_text"
+        app:layout_constraintTop_toTopOf="@+id/mode_text"
+        app:layout_constraintLeft_toRightOf="@+id/easy_non_active"/>
+    <TextView
+        android:id="@+id/hard"
+        android:text="HARD"
+        android:layout_marginLeft="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:background="#FF00FF"
+        android:gravity="center"
+        android:layout_width="60sp"
+        android:layout_height="40sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/mode_text"
+        app:layout_constraintTop_toTopOf="@+id/mode_text"
+        app:layout_constraintLeft_toRightOf="@+id/easy_non_active"/>
+
+    <TextView
+        android:id="@+id/unlimited_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ひたすら解く"
+        android:textSize="30dp"
+        android:textColor="#3399FF"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/ta_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mode_text" />
+
+    <TextView
+        android:id="@+id/ta_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="１０問 T A"
+        android:textSize="30dp"
+        android:textColor="#3399FF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ranking_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/unlimited_button" />
+<!--    <TextView-->
+<!--        android:id="@+id/time_limit_button"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="２０秒チャレンジ(近日公開)"-->
+<!--        android:textSize="20dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/ranking_button"-->
+<!--        app:layout_constraintLeft_toLeftOf="parent"-->
+<!--        app:layout_constraintRight_toRightOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/ta_button" />-->
+    <TextView
+        android:id="@+id/ranking_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ランキング(近日公開)"
+        android:textSize="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="90dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ta_button" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/baner_id">
+    </com.google.android.gms.ads.AdView>
+</androidx.constraintlayout.widget.ConstraintLayout>
